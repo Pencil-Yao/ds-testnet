@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+  peer-base:
+    image: ubuntu-net:v1
+    environment:
+      GC_SET: "yes"
+      POA_IP: "192.168.19.68:1317,192.168.19.25:1317"
+      GC_NAME: "gc-owner"
+    working_dir: /opt/gc
+    volumes:
+      - ../docker/app/:/opt/gc/app/
+    command: /opt/gc/app/gaiad start --p2p.seeds ef9723d14f001404f8853bce3ddb04efc0da110e@192.168.19.16:26656

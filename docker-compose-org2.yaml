@@ -1,0 +1,90 @@
+version: '2'
+
+networks:
+  dm-tt:
+
+services:
+
+  dm0.gaia.com:
+    container_name: dm0-n.gaia.com
+    extends:
+      file: base/docker-compose-base-normal.yaml
+      service: peer-base
+    environment:
+      GC_ADDRESS: "cosmos1x0nx9g6w3gs3um2m9cggksv87gqd0jayqzqqk3"
+      GC_MNEMONIC: "clay buzz violin bid puppy orchard castle hen eye nephew oyster execute spot capable agree museum gravity blue arrange device utility gesture problem run"
+      GC_PASSWORD: "grey2019"
+      GC_MONIKER: "gc-dsm0"
+      GC_PORT: "2327"
+    volumes:
+      - ./repo/GAIA_ENV0/:/root/.gaiad/
+    ports:
+      - "2327:1317"
+      - "22057:26657"
+    networks:
+      - dm-tt
+
+  dm1.gaia.com:
+    container_name: dm1-n.gaia.com
+    extends:
+      file: base/docker-compose-base-normal.yaml
+      service: peer-base
+    volumes:
+      - ./repo/GAIA_ENV1/:/root/.gaiad/
+    ports:
+      - "3337:1317"
+      - "23057:26657"
+    networks:
+      - dm-tt
+
+  dm2.gaia.com:
+    container_name: dm2-n.gaia.com
+    extends:
+      file: base/docker-compose-base-normal.yaml
+      service: peer-base
+    volumes:
+      - ./repo/GAIA_ENV2/:/root/.gaiad/
+    ports:
+      - "4347:1317"
+      - "24057:26657"
+    networks:
+      - dm-tt
+
+  dm3.gaia.com:
+    container_name: dm3-n.gaia.com
+    extends:
+      file: base/docker-compose-base-normal.yaml
+      service: peer-base
+    volumes:
+      - ./repo/GAIA_ENV3/:/root/.gaiad/
+    ports:
+      - "5357:1317"
+      - "25057:26657"
+    networks:
+      - dm-tt
+
+  dm4.gaia.com:
+    container_name: dm4-n.gaia.com
+    extends:
+      file: base/docker-compose-base-normal.yaml
+      service: peer-base
+    volumes:
+      - ./repo/GAIA_ENV4/:/root/.gaiad/
+    ports:
+      - "6367:1317"
+      - "26057:26657"
+    networks:
+      - dm-tt
+
+  dm5.gaia.com:
+    container_name: dm5-n.gaia.com
+    extends:
+      file: base/docker-compose-base-normal.yaml
+      service: peer-base
+    volumes:
+      - ./repo/GAIA_ENV5/:/root/.gaiad/
+    ports:
+      - "7377:1317"
+      - "27057:26657"
+    networks:
+      - dm-tt

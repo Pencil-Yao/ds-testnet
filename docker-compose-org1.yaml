@@ -1,0 +1,120 @@
+version: '2'
+
+networks:
+  dm-tt:
+
+services:
+
+  dm0.gaia.com:
+    container_name: dm0.gaia.com
+    extends:
+      file: base/docker-compose-base.yaml
+      service: peer-base
+    environment:
+      GC_ADDRESS: "cosmos1x0nx9g6w3gs3um2m9cggksv87gqd0jayqzqqk3"
+      GC_MNEMONIC: "clay buzz violin bid puppy orchard castle hen eye nephew oyster execute spot capable agree museum gravity blue arrange device utility gesture problem run"
+      GC_PASSWORD: "grey2019"
+      GC_MONIKER: "gc-dsm0"
+      GC_PORT: "2327"
+    volumes:
+      - ./repo/GAIA_ENV0/:/root/.gaiad/
+    ports:
+      - "2327:1317"
+      - "22057:26657"
+    networks:
+      - dm-tt
+
+  dm1.gaia.com:
+    container_name: dm1.gaia.com
+    extends:
+      file: base/docker-compose-base.yaml
+      service: peer-base
+    environment:
+      GC_ADDRESS: "cosmos1cca2e8j2qq3gyvaucanhn2v987k2pnxyf9dyp6"
+      GC_MNEMONIC: "lottery claw benefit rotate rigid combine aware afford tone idea enter release goose doctor nation piano canvas media betray broom tape cereal define kangaroo"
+      GC_PASSWORD: "grey2019"
+      GC_MONIKER: "gc-dsm1"
+      GC_PORT: "3337"
+    volumes:
+      - ./repo/GAIA_ENV1/:/root/.gaiad/
+    ports:
+      - "3337:1317"
+      - "23057:26657"
+    networks:
+      - dm-tt
+
+  dm2.gaia.com:
+    container_name: dm2.gaia.com
+    extends:
+      file: base/docker-compose-base.yaml
+      service: peer-base
+    environment:
+      GC_ADDRESS: "cosmos1620ydf5x4emmehc0ag76kerarudx0dqnx8s6fp"
+      GC_MNEMONIC: "wrap hole deny belt dutch decide crazy absurd rather chest tragic hover fit raise frequent soccer tribe federal autumn silent actor stadium fat hazard"
+      GC_PASSWORD: "grey2019"
+      GC_MONIKER: "gc-dsm2"
+      GC_PORT: "4347"
+    volumes:
+      - ./repo/GAIA_ENV2/:/root/.gaiad/
+    ports:
+      - "4347:1317"
+      - "24057:26657"
+    networks:
+      - dm-tt
+
+  dm3.gaia.com:
+    container_name: dm3.gaia.com
+    extends:
+      file: base/docker-compose-base.yaml
+      service: peer-base
+    environment:
+      GC_ADDRESS: "cosmos1npu3dasecc5krupy8mfqxlmgah4l8muvq7tp8y"
+      GC_MNEMONIC: "capital leg found engage shed current void gossip mean region rookie tumble village multiply front bronze portion slogan burden obey dad acquire buddy armed"
+      GC_PASSWORD: "grey2019"
+      GC_MONIKER: "gc-dsm3"
+      GC_PORT: "5357"
+    volumes:
+      - ./repo/GAIA_ENV3/:/root/.gaiad/
+    ports:
+      - "5357:1317"
+      - "25057:26657"
+    networks:
+      - dm-tt
+
+  dm4.gaia.com:
+    container_name: dm4.gaia.com
+    extends:
+      file: base/docker-compose-base.yaml
+      service: peer-base
+    environment:
+      GC_ADDRESS: "cosmos1ppgcl8dxyp2c8h68qsa3k46t9ry25s9xxwdfyc"
+      GC_MNEMONIC: "ceiling warrior eagle express certain core vacant bullet mass trap walk winter tiny often carpet foster around warrior congress coil art stuff kingdom obtain"
+      GC_PASSWORD: "grey2019"
+      GC_MONIKER: "gc-dsm4"
+      GC_PORT: "6367"
+    volumes:
+      - ./repo/GAIA_ENV4/:/root/.gaiad/
+    ports:
+      - "6367:1317"
+      - "26057:26657"
+    networks:
+      - dm-tt
+
+  dm5.gaia.com:
+    container_name: dm5.gaia.com
+    extends:
+      file: base/docker-compose-base.yaml
+      service: peer-base
+    environment:
+      GC_ADDRESS: "cosmos14g7zam9exzhsc6wtyp2yxph9hqvgslcegexguc"
+      GC_MNEMONIC: "vanish define also injury top trap chef quiz apology fault yard elegant debate cloth minute problem crunch endorse spell today tube gown blanket monster"
+      GC_PASSWORD: "grey2019"
+      GC_MONIKER: "gc-dsm5"
+      GC_PORT: "7377"
+    volumes:
+      - ./repo/GAIA_ENV5/:/root/.gaiad/
+    ports:
+      - "7377:1317"
+      - "27057:26657"
+    networks:
+      - dm-tt

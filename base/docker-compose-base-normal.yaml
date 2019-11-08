@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+
+  peer-base:
+    image: ubuntu-net:v1
+    working_dir: /opt/gc
+    volumes:
+      - ../docker/app/:/opt/gc/app/
+    command: /opt/gc/app/gaiad start --p2p.seeds ef9723d14f001404f8853bce3ddb04efc0da110e@192.168.19.16:26656
