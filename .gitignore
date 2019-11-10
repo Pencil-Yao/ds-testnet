@@ -1,3 +1,4 @@
 docker/app/
 repo/
-validators_pri/
+validator_pri/
+.idea/*
