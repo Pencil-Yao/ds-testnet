@@ -9,4 +9,14 @@ operate as [official guide](https://github.com/cosmos/gaia/blob/master/docs/depl
 correctly, you should have key node in your private networking, but **set your chain id as testing**, because below operation
 need it.
 ###2. Prepare distributed node
-Second you need to prepare distributed nodes, and these nodes' configuration will be generate as
+Second you need to prepare distributed nodes, and these nodes' configuration will be generate as invoke shell:
+```
+script/autogen.sh <node_number> <gaiad_home> <mode>
+```
+1. node_number: This shell will produce the number: node_number of distributed nodes's environment.
+2. gaiad_home: The gaia-related binary direction, used for node boosting.
+3. mode: one of "create", "recover", 'create' <DIR> duplicate the tendermint validator private keys to <DIR> direction"
+'recover' <DIR> recover the tendermint validator private keys from <>DIR direction"
+###3. Start your network
+start your network
+

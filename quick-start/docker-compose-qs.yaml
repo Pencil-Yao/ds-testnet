@@ -1,0 +1,23 @@
+version: '2'
+
+networks:
+  dm-tt:
+
+services:
+
+  qs0.gaia.com:
+    container_name: qs0.gaia.com
+    image: ubuntu-net:v1
+    volumes:
+      - ../repo/QS_GENESIS/:/root/.gcd/
+      - ../docker/app/:/opt/gc/app/
+    working_dir: /opt/gc
+    command: /opt/gc/app/gaiad start
+    environment:
+      PATH: "/opt/gc/app:${PATH}"
+    ports:
+      - "1317:26650"
+      - "22251:26651"
+      - "22252:26652"
+    networks:
+      - dm-tt
